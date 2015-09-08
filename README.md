@@ -17,11 +17,11 @@ bitmap
 #include <assert.h>
 #include <libtwiddle/bitmap.h>
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
   const uint32_t nbits = 1024;
-  struct tw_bitmap* bitmap = tw_bitmap_new(nbits);
+  struct tw_bitmap *bitmap = tw_bitmap_new(nbits);
 
-  assert(bitmap);
+  assert(bitmap != NULL);
 
   tw_bitmap_set(bitmap, 512);
   assert(tw_bitmap_test_and_clear(bitmap, 512));
@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
 INSTALL
 =======
 
-libtwiddle uses cmake as its build manager.
+libtwiddle uses CMake as its build manager.
 
 Prerequisite libraries
 ----------------------
